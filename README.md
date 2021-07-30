@@ -9,7 +9,7 @@ Create script files for database versioning purposes.
 ![License](https://img.shields.io/npm/l/db-script-gen?style=plastic)
 
 ##Example
-![tutorial](http://www.giphy.com/gifs/zta9ip9ufHuDgbtfHj)
+![tutorial](https://media.giphy.com/media/zta9ip9ufHuDgbtfHj/giphy.gif)
 
 
 ##TOC
