@@ -1,10 +1,11 @@
 db-script-gen
 =============
+[View on NPM](https://www.npmjs.com/package/db-script-gen)
 
 Create script files for database versioning purposes.
 
 ![GitHub issues](https://img.shields.io/github/issues/yehudamakarov/db-script-gen?style=plastic)
-[![NPM](https://img.shields.io/npm/v/db-script-gen?style=plastic)]((https://www.npmjs.com/package/db-script-gen))
+![NPM](https://img.shields.io/npm/v/db-script-gen?style=plastic)
 ![License](https://img.shields.io/npm/l/db-script-gen?style=plastic)
 
 <!-- toc -->
