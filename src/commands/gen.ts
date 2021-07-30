@@ -1,12 +1,14 @@
 import {Command} from '@oclif/command'
-import {appConfig} from '../app-config'
+import {appConfig} from '../utils/app-config'
 import * as inquirer from 'inquirer'
 import * as path from 'path'
 import * as fs from 'fs'
 import cli from 'cli-ux'
 import * as os from 'os'
-import {getRandomMessage, getRandomNumber} from '../messages'
+import {getRandomMessage, getRandomNumber} from '../utils/messages'
 import chalk from 'chalk'
+import {sleep} from '../utils/sleep'
+import {getTimestamp} from '../utils/ts'
 
 export interface MyConfig {
   scriptsLocation: string
@@ -18,8 +20,6 @@ export interface Answers {
   typeOfScript: string,
   confirm: boolean
 }
-
-const sleep = async (ms: number) => new Promise(resolve => setTimeout(resolve, ms))
 
 export default class Gen extends Command {
   static description = 'generate a file that will contain scripts for a target database'
@@ -68,7 +68,7 @@ export default class Gen extends Command {
   }
 
   private static getFileName(responses: any) {
-    const dateString = Gen.getTimestamp()
+    const dateString = getTimestamp()
     let fn = 'V' + dateString + '__'
     if (responses.ticket.indexOf('-') == -1) {
       cli.warn('Make sure your ticket name is correct, it didn\'t have a hyphen in it. They usually do.')
@@ -83,15 +83,5 @@ export default class Gen extends Command {
     }
     fn += '.sql'
     return fn
-  }
-
-  private static getTimestamp() {
-    const date = new Date()
-    return date.getFullYear() + '.'
-      + ('00' + (date.getMonth() + 1)).slice(-2) + '.'
-      + ('00' + date.getDate()).slice(-2) + '.'
-      + ('00' + date.getHours()).slice(-2) + '.'
-      + ('00' + date.getMinutes()).slice(-2) + '.'
-      + ('00' + date.getSeconds()).slice(-2)
   }
 }

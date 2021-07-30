@@ -1,9 +1,8 @@
 import * as fs from 'fs'
-import { Command } from '@oclif/command'
-import { MyConfig } from './commands/gen'
-import * as path from 'path'
+import {Command} from '@oclif/command'
+import {MyConfig} from '../commands/gen'
 import * as os from 'os'
-import chalk from "chalk";
+import {configLocInvalidFix, getConfLoc, validateFileLoc} from './file-loc-helpers'
 
 function validateConf(conf: MyConfig, confLoc: string) {
 	const plsCheck = os.EOL + 'please check out ' + confLoc
@@ -23,21 +22,12 @@ function validateConf(conf: MyConfig, confLoc: string) {
 	throw new Error(scriptLocationInvalid)
 }
 
-const validateConfLoc = (confLoc: string) => {
-	const configLocInvalid = 'The config file\'s location is invalid. Please investigate the existence of ' + chalk.yellowBright(confLoc) + os.EOL + 'Or you may generate one by running the ' + chalk.bgBlackBright.redBright("config") + ' command.'
-	try {
-		if (fs.existsSync(confLoc)) {
-			return
-		}
-	} catch (e) {
-		throw new Error(configLocInvalid)
-	}
-	throw new Error(configLocInvalid)
-};
-
 export const appConfig = (commandClass: Command) => {
-	const confLoc = path.join(commandClass.config.configDir, 'config.json');
-	validateConfLoc(confLoc)
+	const confLoc = getConfLoc(commandClass);
+	const isThere = validateFileLoc(confLoc)
+	if (!isThere) {
+		throw new Error(configLocInvalidFix(confLoc))
+	}
 	const conf = JSON.parse(
 		fs
 			.readFileSync(confLoc)
