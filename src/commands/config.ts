@@ -8,7 +8,7 @@ import * as os from 'os'
 import {appConfig} from '../utils/app-config'
 
 export default class Config extends Command {
-  static description = 'handle your config file and it\'s settings'
+  static description = 'handle your config file and its settings'
 
   static flags = {
     help: flags.help({char: 'h'}),
