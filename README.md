@@ -19,7 +19,7 @@ $ npm install -g db-script-gen
 $ db-script-gen COMMAND
 running command...
 $ db-script-gen (-v|--version|version)
-db-script-gen/0.0.0 darwin-x64 node-v14.17.3
+db-script-gen/0.1.0 darwin-x64 node-v14.17.3
 $ db-script-gen --help [COMMAND]
 USAGE
   $ db-script-gen COMMAND
@@ -28,45 +28,19 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`db-script-gen gen [FILE]`](#db-script-gen-gen-file)
-* [`db-script-gen hello [FILE]`](#db-script-gen-hello-file)
+* [`db-script-gen gen`](#db-script-gen-gen)
 * [`db-script-gen help [COMMAND]`](#db-script-gen-help-command)
 
-## `db-script-gen gen [FILE]`
+## `db-script-gen gen`
 
-describe the command here
-
-```
-USAGE
-  $ db-script-gen gen [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-```
-
-_See code: [src/commands/gen.ts](https://github.com/yehudamakarov/db-script-gen/blob/v0.0.0/src/commands/gen.ts)_
-
-## `db-script-gen hello [FILE]`
-
-describe the command here
+generate a file that will contain scripts for a target database
 
 ```
 USAGE
-  $ db-script-gen hello [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
-
-EXAMPLE
-  $ db-script-gen hello
-  hello world from ./src/hello.ts!
+  $ db-script-gen gen
 ```
 
-_See code: [src/commands/hello.ts](https://github.com/yehudamakarov/db-script-gen/blob/v0.0.0/src/commands/hello.ts)_
+_See code: [src/commands/gen.ts](https://github.com/yehudamakarov/db-script-gen/blob/v0.1.0/src/commands/gen.ts)_
 
 ## `db-script-gen help [COMMAND]`
 
