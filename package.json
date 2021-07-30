@@ -12,6 +12,7 @@
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^3",
     "inquirer": "^8.1.2",
+    "moment": "^2.29.1",
     "tslib": "^1"
   },
   "devDependencies": {
