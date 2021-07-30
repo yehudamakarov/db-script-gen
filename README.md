@@ -8,6 +8,11 @@ Create script files for database versioning purposes.
 ![NPM](https://img.shields.io/npm/v/db-script-gen?style=plastic)
 ![License](https://img.shields.io/npm/l/db-script-gen?style=plastic)
 
+##Example
+![tutorial](http://www.giphy.com/gifs/zta9ip9ufHuDgbtfHj)
+
+
+##TOC
 <!-- toc -->
 * [Usage](#usage)
 * [Commands](#commands)
