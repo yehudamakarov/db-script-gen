@@ -18,7 +18,7 @@ $ npm install -g db-script-gen
 $ db-script-gen COMMAND
 running command...
 $ db-script-gen (-v|--version|version)
-db-script-gen/0.4.0 darwin-x64 node-v14.17.3
+db-script-gen/0.5.0 darwin-x64 node-v14.17.3
 $ db-script-gen --help [COMMAND]
 USAGE
   $ db-script-gen COMMAND
@@ -27,25 +27,24 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`db-script-gen config [FILE]`](#db-script-gen-config-file)
+* [`db-script-gen config`](#db-script-gen-config)
 * [`db-script-gen gen`](#db-script-gen-gen)
 * [`db-script-gen help [COMMAND]`](#db-script-gen-help-command)
 
-## `db-script-gen config [FILE]`
+## `db-script-gen config`
 
-describe the command here
+handle your config file and it's settings
 
 ```
 USAGE
-  $ db-script-gen config [FILE]
+  $ db-script-gen config
 
 OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  -c, --check
+  -h, --help   show CLI help
 ```
 
-_See code: [src/commands/config.ts](https://github.com/yehudamakarov/db-script-gen/blob/v0.4.0/src/commands/config.ts)_
+_See code: [src/commands/config.ts](https://github.com/yehudamakarov/db-script-gen/blob/v0.5.0/src/commands/config.ts)_
 
 ## `db-script-gen gen`
 
@@ -56,7 +55,7 @@ USAGE
   $ db-script-gen gen
 ```
 
-_See code: [src/commands/gen.ts](https://github.com/yehudamakarov/db-script-gen/blob/v0.4.0/src/commands/gen.ts)_
+_See code: [src/commands/gen.ts](https://github.com/yehudamakarov/db-script-gen/blob/v0.5.0/src/commands/gen.ts)_
 
 ## `db-script-gen help [COMMAND]`
 
