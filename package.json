@@ -1,7 +1,7 @@
 {
   "name": "db-script-gen",
   "description": "Create script files for database versioning purposes.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "Yehuda Makarov @yehudamakarov",
   "bin": {
     "db-script-gen": "./bin/run"
