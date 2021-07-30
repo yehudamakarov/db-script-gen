@@ -28,8 +28,25 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`db-script-gen gen [FILE]`](#db-script-gen-gen-file)
 * [`db-script-gen hello [FILE]`](#db-script-gen-hello-file)
 * [`db-script-gen help [COMMAND]`](#db-script-gen-help-command)
+
+## `db-script-gen gen [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ db-script-gen gen [FILE]
+
+OPTIONS
+  -f, --force
+  -h, --help       show CLI help
+  -n, --name=name  name to print
+```
+
+_See code: [src/commands/gen.ts](https://github.com/yehudamakarov/db-script-gen/blob/v0.0.0/src/commands/gen.ts)_
 
 ## `db-script-gen hello [FILE]`
 
