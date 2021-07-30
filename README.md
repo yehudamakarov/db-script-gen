@@ -3,10 +3,9 @@ db-script-gen
 
 Create script files for database versioning purposes.
 
-[![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/db-script-gen.svg)](https://npmjs.org/package/db-script-gen)
-[![Downloads/week](https://img.shields.io/npm/dw/db-script-gen.svg)](https://npmjs.org/package/db-script-gen)
-[![License](https://img.shields.io/npm/l/db-script-gen.svg)](https://github.com/yehudamakarov/db-script-gen/blob/master/package.json)
+![GitHub issues](https://img.shields.io/github/issues/yehudamakarov/db-script-gen?style=plastic)
+![npm](https://img.shields.io/npm/v/db-script-gen?style=plastic)
+![NPM](https://img.shields.io/npm/l/db-script-gen?style=plastic)
 
 <!-- toc -->
 * [Usage](#usage)
