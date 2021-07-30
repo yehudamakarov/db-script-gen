@@ -11,10 +11,12 @@
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^3",
+    "inquirer": "^8.1.2",
     "tslib": "^1"
   },
   "devDependencies": {
     "@oclif/dev-cli": "^1",
+    "@types/inquirer": "^7.3.3",
     "@types/node": "^10",
     "eslint": "^5.13",
     "eslint-config-oclif": "^3.1",

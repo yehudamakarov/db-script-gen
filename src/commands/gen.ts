@@ -1,5 +1,6 @@
 import {Command, flags} from '@oclif/command'
 import {appConfig} from '../app-config'
+import * as inquirer from 'inquirer'
 
 export interface MyConfig {
   scriptsLocation: string
@@ -20,14 +21,28 @@ export default class Gen extends Command {
 
   async run() {
     const ac = appConfig(this)
-    const {args, flags} = this.parse(Gen)
 
-    const name = flags.name ?? 'world'
-    this.log(`hello ${name} from /Users/yehudamakarov/code/db-script-gen/src/commands/gen.ts`)
-    if (args.file && flags.force) {
-      this.log(`you input --force and --file: ${args.file}`)
-    }
+    const responses = await inquirer.prompt([{
+      name: 'ticket',
+      message: 'What ticket are you working on?',
+      type: 'input',
+    }, {
+      name: 'type of script',
+      message: 'What type of script do you need to create?',
+      type: 'list',
+      choices: [
+        {name: 'add a table'}, {name: 'alter a table'}, {name: 'misc'}],
+    }, {
+      name: 'description',
+      message: 'Additional description?',
+      type: 'input',
+    }, {
+      name: 'confirm',
+      message: 'Please confirm your choices',
+      type: 'confirm',
+    }])
 
     console.log(ac.scriptsLocation)
+    console.table(responses)
   }
 }
