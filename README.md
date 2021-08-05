@@ -22,6 +22,7 @@ Create script files for database versioning purposes.
 <!-- usage -->
 ```sh-session
 $ npm install -g db-script-gen
+(make sure your npm global install directory location is on your PATH)
 $ db-script-gen COMMAND
 running command...
 $ db-script-gen (-v|--version|version)
